@@ -28,7 +28,7 @@
 <a href="#" class="lista-menu__link">Front-end</a>
 </li>
 <li class="lista-menu__item">
-         <a href="#" class="lista-menu__link">Infraestrutura</a>
+<a href="#" class="lista-menu__link">Infraestrutura</a>
 </li>
 <li class="lista-menu__item">
 <a href="#" class="lista-menu__link">Business</a>
@@ -40,22 +40,25 @@
 <img src="Logo.svg.png" alt="logo da alurabooks" class="container--imagem">
 </div>
 <div class="container">
-<a href="#"><img src="Favoritos.svg.png" alt="menus favoritos" class="container__imagem"></a>
-<a href="#"><img src="Compras.svg.png" alt="carrinho de compras" class="container__imagem"></a>
-<a href="#"><img src="Usuario.svg.png" alt="menu perfil" class="container__imagem"></a>
+<a href="#"><img src="Favoritos.svg" alt="menus favoritos" class="container__imagem"></a>
+<a href="#"><img src="Compras.svg" alt="carrinho de compras" class="container__imagem"></a>
+<a href="#"><img src="Usuario.svg" alt="menu perfil" class="container__imagem"></a>
 </div>
 </header>
 <section class="banner">
 <h2 class="banner__titulo">Já sabe por onde começar?</h2>
 <p class="banner__texto">Encontre em nossa
 estante o que precisa para seu desenvolvimento!</p>
-<input type=”search” class="banner__pesquisa"
-placeholder=”Qual será sua próxima leitura?”>
+<input type=”search” class="banner__pesquisa" placeholder="Qual será sua próxima leitura?">
 </section>
 <section class="carrossel">
-<h2 class="carrossel__titulo">Novos lançamentos</h2>
+<h2 class="carrossel__titulo">Novos lançamentos</h2><!-- If we need pagination -->
+<div class="swiper-pagination"></div>
 <div class="swiper">
 <!-- Additional required wrapper -->
+<!-- If we need pagination -->
+<div class="swiper-pagination"></div><!-- If we need pagination -->
+<div class="swiper-pagination"></div>
 <div class=”swiper-wrapper”>
 <!-- Slides -->
 <div class="swiper-slide"><img src="img/ApacheKafkasvg"
@@ -66,15 +69,20 @@ alt="Livro sobre JavaScript da AluraBooks"></div>
 alt="Livro sobre Portugol da AluraBooks"></div>
 ...
 </div>
-<!-- If we need pagination -->
-<div class="swiper-pagination"></div>
 <!-- If we need navigation buttons -->
 <div class="swiper-button-prev"></div>
 <div class="swiper-button-next"></div>
-<!-- If we need scrollbar -->
-<div class="swiper-scrollbar"></div>
 </div>
 </section>
-<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>   
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>   <!-- If we need pagination -->
+<div class="swiper-pagination"></div>
+spaceBetween: 10,
+slidesPerView: 3,
+pagination: {
+el: '.swiper-pagination',
+type: 'bullets',
+},
+});
+</script>
 </body>
 </html>
